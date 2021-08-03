@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 1 rem = 10px && 10px/16px = 62.5% */
+  font-size: 62.5%;
+
+  /*
+  $breakPoint argument choices:
+  - phone
+  - tabletPortrait
+  - tabletLandscape
+  - bigDesktop
+  */
+
+  @include responsive(bigDesktop) {
+    // Is width >= 1800
+    //font-size: 75%; // 1rem = 12px, 12px/16px = 75%
+  }
+
+  @include responsive(tabletLandscape) {
+    // Is width < 1200
+    // font-size: 52.65%; // 1rem = 9px, 9px/16px = 52.65%
+  }
+
+  @include responsive(tabletPortrait) {
+    // Is width < 900
+    // font-size: 50%; // 1rem = 8px, 8px/16px = 50%
+  }
+
+  @include responsive(phone) {
+    // Is width < 600
+    //font-size: 43.75%;
+    // font-size: 47%;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+}
+
+strong {
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "montserrat";
+  color: #2e3438;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+p {
+  font-size: 1.6em;
+  color: #797979;
+}
+
+main {
+  padding-top: 7em;
+}
