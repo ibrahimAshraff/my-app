@@ -1,0 +1,26 @@
+.container {
+  margin: 0 auto;
+  max-width: $containerWidth;
+  width: 100%;
+
+  &.flex {
+    height: 100%;
+    @include displayFlex;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #053742;
+  }
+
+  .header__mobile-nav {
+    background: #053742;
+  }
+  .header__contents h1 {
+    color: white;
+  }
+  .header__nav__link:visited {
+    color: #a2dbfa;
+  }
+}
